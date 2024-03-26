@@ -1,0 +1,58 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.label {
+font-size: 17px;
+line-height: 22px;
+}
+.select-proxy {
+  border: 1px solid #ccc;
+  padding: 8px;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  background-color: #fff;
+  min-width: 300px;
+  height: auto;
+  &:after {
+    content: '\25BC';
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.required {
+  color: red;
+}
+.selected-value {
+  padding: 2px 5px;
+}
+
+.options-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 1px solid #ccc;
+  background-color: white;
+  z-index: 1000;
+  color: black;
+}
+
+.option {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+  color: black;
+  &:hover {
+    background-color: #FFDA42;
+    color: white;
+  }
+}
+.selected {
+  background-color: #FFDA42;
+  color: white;
+}

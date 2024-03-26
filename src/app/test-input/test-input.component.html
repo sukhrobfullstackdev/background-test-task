@@ -1,0 +1,4 @@
+<div class="item">
+  <label [for]="field" class="label">{{ label }} <span class="required" *ngIf="required">*</span></label>
+  <input class="input" type="text" [name]="field" [id]="field" [value]="model[field] || ''" (input)="onInputChange($event.target.value)">
+</div>

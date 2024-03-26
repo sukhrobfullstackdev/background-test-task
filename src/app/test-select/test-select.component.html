@@ -1,0 +1,14 @@
+<div class="item">
+<p class="label">{{label}} <span class="required" *ngIf="required">*</span></p>
+<div class="select-proxy" (click)="toggleDropdown()">
+  <div class="selected-value">{{ model[field] || 'Select an option' }}</div>
+  <div *ngIf="showOptions" class="options-container">
+    <div *ngFor="let choice of choices"
+         [ngClass]="{'selected': model[field] === choice}"
+         class="option"
+         (click)="onSelectChange(choice)">
+      {{ choice }}
+    </div>
+  </div>
+</div>
+</div>

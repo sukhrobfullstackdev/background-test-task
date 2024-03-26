@@ -1,0 +1,23 @@
+.item {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin: 10px auto;
+  .label {
+    font-size: 17px;
+    line-height: 22px;
+
+    .required {
+      color: red;
+    }
+  }
+
+  .input {
+    border-radius: 3px;
+    border: 1px solid #C3C3C3;
+    padding: 7px 12px;
+    min-width: 200px;
+    height: auto;
+    outline: none;
+  }
+}

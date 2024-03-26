@@ -1,0 +1,14 @@
+<form (ngSubmit)="onSubmit($event)">
+  <ng-container *ngFor="let field of formFields">
+    <app-test-input *ngIf="field.type === 'input'" [label]="field.label" [model]="testForm"
+                    [field]="field.field" [required]="field.required"></app-test-input>
+    <app-test-number *ngIf="field.type === 'number'" [label]="field.label" [model]="testForm"
+                     [field]="field.field" [required]="field.required"></app-test-number>
+    <app-test-select *ngIf="field.type === 'select'" [label]="field.label" [choices]="field.choices" [model]="testForm"
+                     [field]="field.field" [required]="field.required"></app-test-select>
+    <app-test-checkbox *ngIf="field.type === 'checkbox'" [label]="field.label" [model]="testForm"
+                       [field]="field.field" [required]="field.required"></app-test-checkbox>
+  </ng-container>
+  <button type="submit">Submit</button>
+</form>
+
